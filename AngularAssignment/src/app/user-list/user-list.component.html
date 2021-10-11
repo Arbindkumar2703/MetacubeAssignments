@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-6 card-small">
+    <h3>Enter number of users to generate</h3>
+    <input class="form-control" type="number" min="1" max="1000" (change)="generate($event)">
+  </div>
+</div>
+  <div class="row" *ngIf="UsersList">
+  <div class="col-6 tablediv">
+    <table class="table table-active table-responsive">
+      <thead>
+        <th>First Name</th>
+        <th>Email</th>
+        <th>Show Me</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of UsersList">
+          <td>{{user.First_Name}}</td>
+          <td>{{user.Email}}</td>
+          <td><button class="btn btn-block" (click)="showMe(user.id)">Show Me</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6">
+    <div class="card card-body" *ngIf="SelectedUser">
+      <label class="form-control-lg">First Name  : <b>{{SelectedUser.First_Name}}</b></label>
+      <Label class="form-control-lg">Last Name  :  <b>{{SelectedUser.Last_Name}}</b></Label>
+      <Label class="form-control-lg">Email  :  <b>{{SelectedUser.Email}}</b></Label>
+      <Label class="form-control-lg">Active  :  <b>{{SelectedUser.IsActive}}</b></Label>
+    </div>
+  </div>
+</div>
