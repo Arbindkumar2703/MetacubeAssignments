@@ -1,10 +1,13 @@
-<div class="row">
+<div class="row container-fluid">
   <div class="col-6 card-small">
     <h3>Enter number of users to generate</h3>
     <input class="form-control" type="number" min="1" max="1000" (change)="generate($event)">
+    <div *ngIf="hasError" >
+      <label>Max value can not be more then 1000</label>
+    </div>
   </div>
 </div>
-  <div class="row" *ngIf="UsersList">
+  <div class="row container-fluid" *ngIf="UsersList">
   <div class="col-6 tablediv">
     <table class="table table-active table-responsive">
       <thead>
@@ -16,7 +19,7 @@
         <tr *ngFor="let user of UsersList">
           <td>{{user.First_Name}}</td>
           <td>{{user.Email}}</td>
-          <td><button class="btn btn-block" (click)="showMe(user.id)">Show Me</button></td>
+          <td><button class="btn btn-sm btn-outline-secondary" (click)="showMe(user.id)">Show Me</button></td>
         </tr>
       </tbody>
     </table>

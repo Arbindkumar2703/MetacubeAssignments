@@ -18,6 +18,8 @@ import { Util } from './models/util';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserComponent } from './user/user.component';
 import { DataService } from './services/data.service';
+import { Chapter8Component } from './chapter8/chapter8.component';
+import { UserErrorComponent } from './user-error/user-error.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,7 @@ const routes: Routes = [
   { path: 'user-list', component: UsersListComponent },
   { path: 'add-user', component: AddUserLogServiceComponent },
   { path: 'user/:id', component: UserComponent },
-  { path: 'chapter8', component: AddUserLogServiceComponent },
+  { path: 'chapter8', component: Chapter8Component },
 ];
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ const routes: Routes = [
     AddUserLogServiceComponent,
     UsersListComponent,
     UserComponent,
+    Chapter8Component,
+    UserErrorComponent,
   ],
   imports: [
     FormsModule,

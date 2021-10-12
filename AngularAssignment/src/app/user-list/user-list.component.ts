@@ -10,19 +10,24 @@ import { Users } from './../models/users';
 export class UserListComponent implements OnInit {
   UsersList: Users[];
   SelectedUser: Users;
+  hasError: boolean = false;
   constructor(private util: Util) {
   }
 
   ngOnInit(): void {
 
   }
-  showMe(id: number){
+  showMe(id: number) {
     this.SelectedUser = this.UsersList.find(user => user.id === id);
   }
-  generate(event: any){
-    this.UsersList = this.util.generateUsers(event.target.value);
+  generate(event: any) {
+    this.hasError = false;
+    if (event.target.value <= 1000) {
+      this.UsersList = this.util.generateUsers(event.target.value);
+    }
+    else {
+      this.hasError = true;
+    }
   }
-
-
 }
 

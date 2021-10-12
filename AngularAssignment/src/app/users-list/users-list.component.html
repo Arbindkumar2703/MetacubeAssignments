@@ -1,5 +1,10 @@
-<a [routerLink]="['/add-user']" class="btn btn-outline-dark" >Add User</a>
-<div class="row" *ngIf="UsersList">
+<div class="container-fluid">
+  <a [routerLink]="['/add-user']" class="btn btn-outline-dark" >Add User</a>
+</div>
+
+
+<div class="row container-fluid" *ngIf="UsersList">
+  <div class="col-3"></div>
   <div class="col-6 tablediv">
     <table class="table table-active table-responsive">
       <thead>
@@ -16,4 +21,5 @@
       </tbody>
     </table>
   </div>
+  <div class="col-3"></div>
 </div>

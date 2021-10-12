@@ -14,6 +14,7 @@ export class AddUserComponent implements OnInit {
 
   onSubmit(data: any) {
     console.log(data);
+    alert("Data logged in console please check: "+JSON.stringify(data))
   }
 
 }

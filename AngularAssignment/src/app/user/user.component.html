@@ -1,15 +1,18 @@
-<div class="col-6">
-  <div class="card card-body" *ngIf="true">
-    <label class="form-control-lg">First Name  : <b>{{SelectedUser.First_Name}}</b></label>
-    <Label class="form-control-lg">Last Name  :  <b>{{SelectedUser.Last_Name}}</b></Label>
-    <Label class="form-control-lg">Email  :  <b>{{SelectedUser.Email}}</b></Label>
-    <Label class="form-control-lg">Active  :  <b>{{SelectedUser.IsActive}}</b></Label>
-    <div class="card-footer">
-      <a [routerLink]="['/add-user']" class="btn btn-outline-dark" >Add User</a>
-      <a [routerLink]="['/user-list']" class="btn btn-outline-dark">
-        Back to List
-      </a>
+<div class="row container-fluid">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <div class="card card-body" *ngIf="SelectedUser">
+      <label class="form-control-lg">First Name : <b>{{SelectedUser.First_Name}}</b></label>
+      <Label class="form-control-lg">Last Name : <b>{{SelectedUser.Last_Name}}</b></Label>
+      <Label class="form-control-lg">Email : <b>{{SelectedUser.Email}}</b></Label>
+      <Label class="form-control-lg">Active : <b>{{SelectedUser.IsActive}}</b></Label>
+      <div class="card-footer">
+        <a [routerLink]="['/add-user']" class="btn btn-outline-dark">Add User</a>
+        <a [routerLink]="['/user-list']" class="btn btn-outline-dark">
+          Back to List
+        </a>
+      </div>
     </div>
   </div>
+  <div class="col-3"></div>
 </div>
-
