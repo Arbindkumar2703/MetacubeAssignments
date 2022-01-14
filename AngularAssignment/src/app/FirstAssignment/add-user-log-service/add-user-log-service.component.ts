@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { UserLogService } from '../services/user-log.service';
-import { UserService } from '../services/user.service';
+import { UserLogService } from '../../services/user-log.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
-  selector: 'app-chapter8',
-  templateUrl: './chapter8.component.html',
-  styleUrls: ['./chapter8.component.css']
+  selector: 'app-add-user-log-service',
+  templateUrl: './add-user-log-service.component.html',
+  styleUrls: ['./add-user-log-service.component.css']
 })
-export class Chapter8Component implements OnInit {
+export class AddUserLogServiceComponent implements OnInit {
 
   constructor(private userLogService: UserLogService, private userService: UserService) { }
 
@@ -24,4 +24,3 @@ export class Chapter8Component implements OnInit {
   }
 
 }
-
