@@ -1,25 +1,25 @@
 <div class="container-fluid">
-  <a [routerLink]="['/add-user']" class="btn btn-outline-dark" >Add User</a>
+    <a [routerLink]="['/1/add-user']" class="btn btn-outline-dark">Add User</a>
 </div>
 
 
 <div class="row container-fluid" *ngIf="UsersList">
-  <div class="col-3"></div>
-  <div class="col-6 tablediv">
-    <table class="table table-active table-responsive">
-      <thead>
-        <th>First Name</th>
-        <th>Email</th>
-        <th>Show Me</th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of UsersList">
-          <td>{{user.First_Name}}</td>
-          <td>{{user.Email}}</td>
-          <td><a [routerLink]="['/user', user.id]" routerLinkActive="router-link-active" >Show Me</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="col-3"></div>
+    <div class="col-3"></div>
+    <div class="col-6 tablediv">
+        <table class="table table-active table-responsive">
+            <thead>
+                <th>First Name</th>
+                <th>Email</th>
+                <th>Show Me</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of UsersList">
+                    <td>{{user.First_Name}}</td>
+                    <td>{{user.Email}}</td>
+                    <td><a [routerLink]="['/user', user.id]" routerLinkActive="router-link-active">Show Me</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-3"></div>
 </div>

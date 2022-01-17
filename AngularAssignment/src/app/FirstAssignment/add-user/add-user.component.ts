@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogService } from 'src/app/services/user-log.service';
 
 @Component({
   selector: 'app-add-user',
@@ -7,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private LogService: LogService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(data: any) {
-    console.log(data);
-    alert("Data logged in console please check: "+JSON.stringify(data))
+    this.LogService.LogMyDetails(data, 'info');
   }
 
 }

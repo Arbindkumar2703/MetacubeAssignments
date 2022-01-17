@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserLogService } from '../../services/user-log.service';
+import { LogService } from '../../services/user-log.service';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -9,19 +9,14 @@ import { UserService } from '../../services/user.service';
 })
 export class Chapter8Component implements OnInit {
 
-  constructor(private userLogService: UserLogService, private userService: UserService) { }
+  constructor(private logService: LogService, private userService: UserService) { }
 
   ngOnInit(): void {
   }
   onSubmit(data: any) {
-    this.userLogService.LogMyDetails(data);
-
     this.userService.createuser(data).subscribe(response => {
-      console.log(response)
-
+      this.logService.LogMyDetails(response, 'info');
     });
-
   }
-
 }
 
