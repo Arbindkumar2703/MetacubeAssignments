@@ -5,6 +5,13 @@ body {
 #page-content-wrapper {
     min-width: 100vw;
 }
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    width: fit-content;
+    display: block;
+    margin: auto;
+}
 
 @media (min-width: 768px) {
     #page-content-wrapper {
