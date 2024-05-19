@@ -21,6 +21,6 @@ jobs:
       with:
         node-version: latest
         cache: 'npm'
-        cache-dependency-path: AngularAssignment/package-lock.json
+        cache-dependency-path: AngularAssignment/package.json
     - run: npm install
     - run: npm run build
